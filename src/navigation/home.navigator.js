@@ -5,19 +5,15 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigation, BottomNavigationTab, Layout, Text } from '@ui-kitten/components';
 import { Icon } from '@ui-kitten/components';
 import { Home } from '../scenes/dashboards/home.component';
+import { Favorite } from '../scenes/dashboards/favorite.component';
 
 const { Navigator, Screen } = createBottomTabNavigator();
+
 
 const selectedColor = '#e65b6f';
 const unselectedColor = '#000';
 
 
-const FavoriteScreen = () => (
-  
-  <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text category='h1'>Favorite</Text>
-  </Layout>
-);
 const NotificationsScreen = () => (
   <Layout style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
     <Text category='h1'>Notification</Text>
@@ -50,9 +46,9 @@ function BottomTabBar({ navigation, state }){
 }
 
 const TabNavigator = () => (
-  <Navigator tabBar={props => <BottomTabBar {...props} />}>
+  <Navigator tabBar={props => <BottomTabBar {...props} />} options={{title:'Trang chủ'}}>
     <Screen name='Home' component={Home}/>
-    <Screen name='Favorite' component={FavoriteScreen}/>
+    <Screen name='Favorite' component={Favorite}/>
     <Screen name='Notifications' component={NotificationsScreen}/>
     <Screen name='Account' component={AccountScreen}/>
   </Navigator>

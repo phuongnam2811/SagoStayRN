@@ -7,7 +7,7 @@ const data = new Array(8).fill({
     title: 'Item',
   });
 
-export function HomeLayout( { navigation } ){
+export function FavoriteLayout( { navigation } ){
 
     const onItemPress = () => {
         Alert.alert(
@@ -24,15 +24,7 @@ export function HomeLayout( { navigation } ){
             { cancelable: false }
           );
       };
-    const renderHeader = ()  => (
-      <>
-      <Text
-        style={styles.headerTitle}
-        category='p2'>
-        Phòng nổi bật
-      </Text>       
-      </>
-    )
+
     const renderItemHeader = () => (
 
         <ImageBackground
@@ -78,7 +70,6 @@ export function HomeLayout( { navigation } ){
             contentContainerStyle={styles.listContent}
             data={data}
             renderItem={renderItem}
-            ListHeaderComponent={renderHeader}
           />
         </Layout>
       );      
@@ -87,9 +78,6 @@ export function HomeLayout( { navigation } ){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-    },
-    headerTitle: {
-      marginVertical: 8,
     },
     list: {
       flex: 1,

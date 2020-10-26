@@ -8,7 +8,7 @@ const Stack = createStackNavigator();
 export function AuthNavigator(){
     return(
     <Stack.Navigator headerMode='none'>
-        <Stack.Screen name='SignIn' component={SignIn} />
+        <Stack.Screen name='SignIn' component={SignIn}/>
         <Stack.Screen name='SignUp' component={SignUp}/>   
         <Stack.Screen name='ForgotPassword' component={ForgotPassword}/>   
     </Stack.Navigator>

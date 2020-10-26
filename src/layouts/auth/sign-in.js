@@ -16,7 +16,7 @@ export function SignInLayout({ navigation }) {
       );
 
     const onSignInButtonPress = () => {
-        
+        const isSignedIn = true;
       };
     
       const onSignUpButtonPress = ()=> {
