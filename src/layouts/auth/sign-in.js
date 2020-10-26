@@ -36,7 +36,8 @@ export function SignInLayout({ navigation }) {
         bounces= 'false'
         bouncesZoom= 'false'
         alwaysBounceVertical= 'false'
-        alwaysBounceHorizontal= 'false'>
+        alwaysBounceHorizontal= 'false'
+        enableOnAndroid = {true}>
             <ImageBackground style={{width:'100%',height:'100%',flex:1}} source={backgroundImage}>
                 <View style={styles.overlay}>
                     <View style={styles.headerContainer}>

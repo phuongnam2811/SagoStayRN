@@ -6,6 +6,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 import { EmailIcon } from '../assets/icons';
 import  backgroundImage  from './assets/image-background.jpg';
 
+
 export function ForgotPasswordLayout({ navigation }) {
 
     const [email, setEmail] = React.useState('');
@@ -16,13 +17,15 @@ export function ForgotPasswordLayout({ navigation }) {
     const onBackButtonPress = () =>{
         navigation && navigation.goBack();
     }
+
     return(
         <KeyboardAwareScrollView
         contentContainerStyle= {{ flexGrow: 1 }}
         bounces= 'false'
         bouncesZoom= 'false'
         alwaysBounceVertical= 'false'
-        alwaysBounceHorizontal= 'false'>
+        alwaysBounceHorizontal= 'false'
+        enableOnAndroid = {true}>
             <ImageBackground style={{width:'100%',height:'100%',flex:1}} source={backgroundImage}>
                 <View style={styles.overlay}>
                     <View style={styles.headerContainer}>
