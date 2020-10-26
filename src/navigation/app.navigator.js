@@ -15,16 +15,13 @@ const navigatorTheme = {
 };
 
 const isSignedIn = true;
-
-
 const Stack = createStackNavigator();
 export default function MainNavigator(){
   return(
     <NavigationContainer>
       <Stack.Navigator headerMode='none'>
         {isSignedIn === false ? (
-          <Stack.Screen name='Auth' component={AuthNavigator} />
-          
+          <Stack.Screen name='Auth' component={AuthNavigator}/>
         ) : (
           <Stack.Screen name='Home' component={HomeNavigator}/>
         )}

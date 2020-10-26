@@ -6,7 +6,7 @@ import { BottomNavigation, BottomNavigationTab, Layout, Text } from '@ui-kitten/
 import { Icon } from '@ui-kitten/components';
 import { Home } from '../scenes/dashboards/home.component';
 import { Favorite } from '../scenes/dashboards/favorite.component';
-
+import { Notifications } from '../scenes/dashboards/notifications.component'
 const { Navigator, Screen } = createBottomTabNavigator();
 
 
@@ -46,10 +46,10 @@ function BottomTabBar({ navigation, state }){
 }
 
 const TabNavigator = () => (
-  <Navigator tabBar={props => <BottomTabBar {...props} />} options={{title:'Trang chủ'}}>
+  <Navigator tabBar={props => <BottomTabBar {...props} />} >
     <Screen name='Home' component={Home}/>
     <Screen name='Favorite' component={Favorite}/>
-    <Screen name='Notifications' component={NotificationsScreen}/>
+    <Screen name='Notifications' component={Notifications}/>
     <Screen name='Account' component={AccountScreen}/>
   </Navigator>
 );

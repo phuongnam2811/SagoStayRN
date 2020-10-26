@@ -1,6 +1,6 @@
 import React from 'react';
 import { Alert, ImageBackground, StyleSheet, View} from 'react-native';
-import {Card, Layout, List, Text } from '@ui-kitten/components';
+import {Card, Layout, List, Text,TopNavigation } from '@ui-kitten/components';
 import titleImage  from './assets/title-image.jpg';
 
 const data = new Array(8).fill({
@@ -64,7 +64,12 @@ export function FavoriteLayout( { navigation } ){
       return (
         <Layout
           style={styles.container}
-          level='2'>           
+          level='2'>     
+        <TopNavigation
+            alignment='center'
+            title='Yêu thích'
+            style={{backgroundColor:'transparent'}}
+        />      
           <List
             style={styles.list}
             contentContainerStyle={styles.listContent}
